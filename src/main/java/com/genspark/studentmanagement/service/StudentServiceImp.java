@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @NoArgsConstructor
@@ -33,10 +34,12 @@ public class StudentServiceImp implements StudentServiceInt{
     }
 
     @Override
-    public List<Course> getAllStudentCourses(Long id) {
+    public Set<Course> getAllStudentCourses(Long id) {
         //select * from courses where student_id=id //inner join
         //use course repository to find courses by student
-        return null;
+        Student student =studentRepo.findById(id).get();
+        Set<Course> courses=student.getCourses();
+        return courses;
     }
     //C=Create
     @Override

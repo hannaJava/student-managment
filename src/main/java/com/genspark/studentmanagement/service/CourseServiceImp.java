@@ -3,11 +3,17 @@ package com.genspark.studentmanagement.service;
 import com.genspark.studentmanagement.model.Course;
 import com.genspark.studentmanagement.model.Student;
 import com.genspark.studentmanagement.repository.CourseRepoInt;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
+@NoArgsConstructor
+@AllArgsConstructor
 public class CourseServiceImp implements CourseServiceInt{
     @Autowired
     CourseRepoInt courseRepo;
