@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController//=@Controller+@ResponseBody
 @AllArgsConstructor
@@ -29,10 +30,10 @@ public class CourseController {
 
         return courseService.getCourseById(id);
     }
-    @GetMapping("/coursestudents/{id}")//not completed
-    public List<Student>getCourseStudents(@PathVariable("id") Long id){
+    /*@GetMapping("/coursestudents/{id}")//not completed
+    public Set<Student> getCourseStudents(@PathVariable("id") Long id){
         return courseService.getAllCourseStudents(id);
-    }
+    }*/
     @PostMapping("/addcourse")
     public Course addCourse(@RequestBody Course course){
         courseService.addCourse(course);

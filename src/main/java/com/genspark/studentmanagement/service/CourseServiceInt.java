@@ -5,6 +5,7 @@ import com.genspark.studentmanagement.model.Student;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface CourseServiceInt {
     //CRUD operations
@@ -12,7 +13,7 @@ public interface CourseServiceInt {
     List<Course> getAllCourses();
     Optional<Course> getCourseById(Long id);
     //courses related to a student
-    List<Student> getAllCourseStudents(Long id);
+    Set<Student> getAllCourseStudents(Long id);
     //Create
     Course addCourse(Course course);
     //Delete

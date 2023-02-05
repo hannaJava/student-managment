@@ -29,7 +29,7 @@ public class StudentController {
 
         return studentService.getStudentById(id);
     }
-    @GetMapping("/studentcourses/{id}")//not completed
+    @GetMapping("/studentcourses/{id}")
     public Set<Course> getStudentCourses(@PathVariable("id") Long id){
         return studentService.getAllStudentCourses(id);
     }

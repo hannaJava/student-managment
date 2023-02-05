@@ -35,8 +35,6 @@ public class StudentServiceImp implements StudentServiceInt{
 
     @Override
     public Set<Course> getAllStudentCourses(Long id) {
-        //select * from courses where student_id=id //inner join
-        //use course repository to find courses by student
         Student student =studentRepo.findById(id).get();
         Set<Course> courses=student.getCourses();
         return courses;
