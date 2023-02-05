@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 
 @RestController//=@Controller+@ResponseBody
 @AllArgsConstructor
@@ -26,6 +25,7 @@ public class StudentController {
     }
     @GetMapping("/students/{id}")
     public Optional<Student> getStudentById(@PathVariable("id") Long id){
+
         return studentService.getStudentById(id);
     }
     @GetMapping("/studentcourses/{id}")//not completed

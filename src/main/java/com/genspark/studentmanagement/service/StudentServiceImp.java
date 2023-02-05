@@ -28,6 +28,7 @@ public class StudentServiceImp implements StudentServiceInt{
 
     @Override
     public Optional<Student> getStudentById(Long id) {
+
         return studentRepo.findById(id);
     }
 
@@ -53,12 +54,6 @@ public class StudentServiceImp implements StudentServiceInt{
 
     @Override
     public void deleteAllStudents() {
-        studentRepo.deleteAll();
-    }
-
-
-    @Override
-    public void deleteAllStudent() {
         studentRepo.deleteAll();
     }
     //U=Update

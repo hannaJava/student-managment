@@ -18,7 +18,6 @@ public interface StudentServiceInt {
     //Delete
     void deleteStudent(Long id);
     void deleteAllStudents();
-    void deleteAllStudent();
     //Update
     void updateStudent(Long id,Student student);
 
